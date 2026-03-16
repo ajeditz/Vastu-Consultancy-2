@@ -1,0 +1,157 @@
+.about {
+  padding: 8rem 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.imageSide {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 4/5;
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image {
+  transition: transform 0.8s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+.imageBg {
+  position: absolute;
+  top: 3rem;
+  left: -3rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--accent-orange);
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 2rem;
+  right: -2rem;
+  background-color: var(--accent-orange);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  box-shadow: 0 20px 25px -5px rgba(211, 84, 0, 0.3);
+}
+
+.years {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--font-serif);
+}
+
+.expText {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  width: 2rem;
+  height: 1px;
+  background-color: var(--accent-orange);
+}
+
+.badgeText {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  font-family: var(--font-serif);
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cta {
+  padding: 1.25rem 3rem;
+  background-color: transparent;
+  border: 1px solid var(--foreground);
+  color: var(--foreground);
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background-color: var(--foreground);
+  color: white;
+}

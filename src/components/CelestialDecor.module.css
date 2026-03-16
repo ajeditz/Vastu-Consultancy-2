@@ -1,0 +1,149 @@
+.sriYantraWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: -1;
+  color: var(--accent-orange);
+}
+
+.sriYantra {
+  width: 90%;
+  max-width: 800px;
+}
+
+.moonWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.moonText {
+  font-size: 4rem;
+  z-index: 2;
+  filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
+}
+
+.moonGlow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.phaseName {
+  position: absolute;
+  bottom: -5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  white-space: nowrap;
+}
+
+.tapHint {
+  position: absolute;
+  bottom: -22px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+.solarWrapper {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  z-index: -1;
+  color: var(--accent-orange);
+}
+
+.sunCore {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunCenter {
+  width: 40px;
+  height: 40px;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 30px currentColor;
+  opacity: 0.2;
+}
+
+.raysContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(to top, currentColor, transparent);
+  border-radius: 999px;
+  opacity: 0.4;
+}
+
+.symbolOuter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.symbolContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--accent-orange);
+  z-index: 2;
+}
+
+.symbolLarge {
+  font-size: 5rem;
+  font-family: serif;
+}
+
+.symbolSvg {
+  width: 60px;
+  height: 60px;
+}
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent-orange);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}

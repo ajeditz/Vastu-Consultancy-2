@@ -1,0 +1,185 @@
+.services {
+  padding: 8rem 0;
+  background-color: #faf9f6; /* off-white luxury background */
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmicParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at center, rgba(211, 163, 63, 0.03) 0%, transparent 60%),
+    radial-gradient(circle at 15% 50%, rgba(211, 163, 63, 0.15) 1px, transparent 1px), 
+    radial-gradient(circle at 85% 30%, rgba(211, 163, 63, 0.2) 2px, transparent 2px),
+    radial-gradient(circle at 50% 80%, rgba(211, 163, 63, 0.1) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 120px 120px, 200px 200px, 150px 150px;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatCosmic 30s linear infinite;
+}
+
+@keyframes floatCosmic {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.header {
+  margin-bottom: 5rem;
+  max-width: 40rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  width: 2rem;
+  height: 1px;
+  background-color: var(--accent-orange);
+}
+
+.badgeText {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+}
+
+.title span.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(211, 163, 63, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #ffffff;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cardImage {
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.75) 55%, #ffffff 90%);
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(211, 163, 63, 0.3), 0 0 20px rgba(211, 163, 63, 0.15);
+  border-color: rgba(211, 163, 63, 0.5);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.iconWrapper {
+  color: var(--accent-orange);
+  margin-bottom: 2rem;
+  transition: transform 0.6s ease;
+  width: fit-content;
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-family: var(--font-playfair);
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardTitle {
+  color: #c59b27;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.hoverLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--accent-orange);
+  transition: width 0.6s ease;
+  z-index: 3;
+}
+
+.card:hover .hoverLine {
+  width: 100%;
+}

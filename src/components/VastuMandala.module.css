@@ -1,0 +1,105 @@
+.mandalaContainer {
+  position: absolute;
+  top: -12%;
+  right: -12%;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+  font-weight: 900;
+  color: #000;
+  opacity: 0.012;
+  letter-spacing: 0.15em;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .bgText {
+    font-size: 20rem;
+  }
+}
+
+.mandalaWrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(211, 84, 0, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.orbitCanvas {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  z-index: 1;
+}
+
+.ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.dirText {
+  letter-spacing: 0.3em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.dirText:hover {
+  fill: var(--accent-orange);
+  font-size: 20px;
+  filter: drop-shadow(0 0 10px var(--accent-orange));
+}
+
+.centerOm {
+  position: absolute;
+  font-size: 3rem;
+  color: var(--accent-orange);
+  opacity: 0.8;
+  z-index: 10;
+  animation: breathe 4s infinite ease-in-out;
+  text-shadow: 0 0 20px rgba(211, 84, 0, 0.3);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .mandalaWrapper {
+    width: 600px;
+    height: 600px;
+  }
+  .bgText {
+    font-size: 10rem;
+  }
+}

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "Harnessing celestial movements and spatial harmonics to guide your path toward eternal balance and prosperity.",
 };
 
+import SacredClickEffect from "@/components/SacredClickEffect";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${inter.variable}`}>
+        <SacredClickEffect />
         {children}
       </body>
     </html>

@@ -1,0 +1,326 @@
+.contact {
+  padding: 15rem 0;
+  background-color: #fff;
+  background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.02) 1px, transparent 0);
+  background-size: 50px 50px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.sideDecoration {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+  opacity: 0.3;
+}
+
+.decorativeLine {
+  width: 1px;
+  height: 8rem;
+  background: linear-gradient(to bottom, transparent, var(--accent-orange), transparent);
+}
+
+.decorativeText {
+  writing-mode: vertical-rl;
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  font-weight: 800;
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.badgeText {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  font-weight: 900;
+  color: var(--accent-orange);
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--foreground);
+  font-family: var(--font-playfair);
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 7rem;
+  }
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.outline {
+  -webkit-text-stroke: 1px var(--foreground);
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  max-width: 45rem;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+@media (min-width: 1280px) {
+  .mainContent {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(211, 84, 0, 0.1);
+  padding: 5rem;
+  border-radius: 3rem;
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.04);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: 0.3em;
+  opacity: 0.5;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  color: var(--foreground);
+  font-family: inherit;
+  transition: all 0.4s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent-orange);
+  padding-left: 0.5rem;
+}
+
+.primaryBtn {
+  margin-top: 1.5rem;
+  background: var(--foreground);
+  color: white;
+  padding: 1.25rem 3rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.primaryBtn:hover {
+  background-color: #9a3412;
+  transform: translateY(-2px);
+  box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15);
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-left: 2rem;
+}
+
+.infoBlock {
+  display: flex;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.blockNum {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--accent-orange);
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.4rem;
+}
+
+.blockContent h4 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  opacity: 0.4;
+}
+
+.blockContent p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  font-family: var(--font-playfair);
+}
+
+.phoneLink {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  font-family: var(--font-playfair);
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: var(--accent-orange);
+}
+
+.socialGrid {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.socialLink {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  color: var(--foreground);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.socialLink svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+  stroke: var(--foreground);
+}
+
+.socialLink:hover svg {
+  color: var(--accent-orange);
+  stroke: var(--accent-orange);
+  transform: translateY(-2px) rotate(5deg);
+}
+
+.socialLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-orange);
+  transition: width 0.3s ease;
+}
+
+.socialLink:hover {
+  color: var(--accent-orange);
+}
+
+.socialLink:hover::after {
+  width: 100%;
+}
+
+.bottomBar {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.barLine {
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+}
+
+.copyright {
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+  font-weight: 700;
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .sideDecoration { display: none; }
+  .glassCard { padding: 3rem; }
+  .row { grid-template-columns: 1fr; }
+  .infoContainer { padding-left: 0; }
+  .title { font-size: 3.5rem; }
+}
